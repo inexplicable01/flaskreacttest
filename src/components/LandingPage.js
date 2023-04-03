@@ -9,7 +9,7 @@ import StepByStepGuide from './StepByStepGuide';
 import MortgageCalculator from './MortgageCalculator';
 import HomeInspectorSearch from './HomeInspectorSearch';
 // import AuthWrapper from './AuthWrapper';
-import ChatBot from './ChatBot';
+// import ChatBot from './ChatBot';
 import { AuthContext } from '../context/AuthContext';
 
 // Imported components
@@ -126,7 +126,7 @@ const  LandingPage = () =>{
           <Route path="/final-walkthrough" element={<FinalWalkthrough />} />
           <Route path="/resources-and-tutorials" element={<ResourcesAndTutorials />} />
         </Routes>
- <ChatBot />
+ {/*<ChatBot />*/}
         <SignIn />
       </div>
               </div>
