@@ -4,13 +4,13 @@ import React from "react";
 import "./SignIn.css";
 
 function SignIn(props) {
-  const responseGoogle = (response) => {
-    // Handle Google sign-in
-  };
-
-  const responseFacebook = (response) => {
-    // Handle Facebook sign-in
-  };
+  // const responseGoogle = (response) => {
+  //   // Handle Google sign-in
+  // };
+  //
+  // const responseFacebook = (response) => {
+  //   // Handle Facebook sign-in
+  // };
 
   return (
     <div className="SignIn">

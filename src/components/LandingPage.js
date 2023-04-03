@@ -2,13 +2,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 
 import SignIn from './SignIn';
-import { BrowserRouter as Router, Route, Link, Routes , useNavigate} from 'react-router-dom';
+import {  Route, Link, Routes , useNavigate} from 'react-router-dom';
 
 import Home from './Home';
 import StepByStepGuide from './StepByStepGuide';
 import MortgageCalculator from './MortgageCalculator';
 import HomeInspectorSearch from './HomeInspectorSearch';
-import AuthWrapper from './AuthWrapper';
+// import AuthWrapper from './AuthWrapper';
 import ChatBot from './ChatBot';
 import { AuthContext } from '../context/AuthContext';
 
