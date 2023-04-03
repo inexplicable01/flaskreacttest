@@ -44,7 +44,7 @@ const ChatWindow = () => {
 
 
   const callChatGPT4API = async (message) => {
-    const apiKey = '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';
+    const apiKey = process.env.REACT_APP_CHATGPT_API_KEY;
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
     const messages = [
@@ -53,7 +53,7 @@ const ChatWindow = () => {
       ];
 
       const model = 'gpt-4';
-      const maxTokens = 100;
+      const maxTokens = 200;
 
       const headers = {
         'Content-Type': 'application/json',
