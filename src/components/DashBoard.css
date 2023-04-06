@@ -1,0 +1,11 @@
+.navbar {
+    width: 100%;
+}
+
+.navbar .navbar-nav {
+    flex-grow: 1;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-left: auto;
+}
