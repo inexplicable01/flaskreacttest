@@ -2,9 +2,9 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {Navigate} from 'react-router-dom';
 
-const withAuthProtection = (WrappedComponent) => {
+const WithAuthProtection = (WrappedComponent) => {
     const AuthProtectedComponent = (props) => {
-        const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+        const isAuthenticated = useSelector((state) => state.authReducer.isAuthenticated);
 
         if (!isAuthenticated) {
             return <Navigate to="/" replace/>;
@@ -16,4 +16,4 @@ const withAuthProtection = (WrappedComponent) => {
     return AuthProtectedComponent;
 };
 
-export default withAuthProtection;
+export default WithAuthProtection;

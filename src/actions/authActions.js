@@ -19,7 +19,7 @@ export const signUp = (email, password, firstName, lastName, age, navigate) => a
                 type: actionTypes.SIGN_UP_SUCCESS,
                 payload: {uid: user.uid, email: user.email, Age: age, firstName, lastName}
             });
-            navigate('/dashboard');
+            navigate('/pages-profile');
             return true;
         })
             .catch((error) => {
@@ -52,7 +52,7 @@ export const signIn = (email, password, navigate) => async (dispatch) => {
                     email: user.email, Age, firstName, lastName
                 },
             });
-            navigate('/dashboard');
+            navigate('/pages-profile');
             return true;
         } else {
             // console.log('error?AFDF')

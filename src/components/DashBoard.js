@@ -46,7 +46,7 @@ const Dashboard = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/dashboard/step-by-step-guide">Step-By-Step</Nav.Link>
+                            <Nav.Link href="/step-by-step-guide">Step-By-Step</Nav.Link>
                             <Nav.Link href="/dashboard/feature2">Feature 2</Nav.Link>
                             <NavDropdown title="More" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="/dashboard/feature3">Feature 3</NavDropdown.Item>

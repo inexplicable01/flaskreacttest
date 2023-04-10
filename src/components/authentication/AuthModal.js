@@ -17,7 +17,7 @@ const AuthModal = ({show, closeModal}) => {
     const [age, setAge] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const authError = useSelector((state) => state.auth.error);
+    const authError = useSelector((state) => state.authReducer.error);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

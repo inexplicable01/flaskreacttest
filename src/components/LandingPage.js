@@ -2,9 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 // import SignIn from './SignIn';
 // import {Route, Link, Routes, useNavigate} from 'react-router-dom';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, Route, Routes, useNavigate} from 'react-router-dom';
 // import Home from './Home';
-// import StepByStepGuide from './StepByStepGuide';
 // import MortgageCalculator from './MortgageCalculator';
 // import HomeInspectorSearch from './HomeInspectorSearch';
 // import AuthWrapper from './AuthWrapper';
@@ -26,6 +25,23 @@ import {Button} from 'react-bootstrap';
 // import ResourcesAndTutorials from './resources/ResourcesAndTutorials';
 import AuthModal from "./authentication/AuthModal";
 import {useSelector} from "react-redux";
+import logo from '../Logo.png';
+import Home from "./Home";
+import StepByStepGuide from "./StepByStepGuide";
+// import Index2;
+// import MortgageCalculator from "./MortgageCalculator";
+// import HomeInspectorSearch from "./HomeInspectorSearch";
+// import SignUp from "./authentication/SignUp";
+// import PropertyList from "./property/PropertyList";
+// import PropertyDetails from "./property/PropertyDetails";
+// import SubmitOffer from "./offer/SubmitOffer";
+// import ManageOffers from "./offer/ManageOffers";
+// import ContractGeneration from "./contract/ContractGeneration";
+// import Inspection from "./closing/Inspection";
+// import Financing from "./closing/Financing";
+// import FinalWalkthrough from "./closing/FinalWalkthrough";
+// import ResourcesAndTutorials from "./resources/ResourcesAndTutorials";
+// import Index2 from "./LandingPageIndex2";
 
 const LandingPage = () => {
 
@@ -55,7 +71,7 @@ const LandingPage = () => {
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img src="src/Logo.png" alt="Title Art" height="30"/>
+                        <img src={logo} alt="Title Art" height="30"/>
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -71,7 +87,7 @@ const LandingPage = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/step-by-step-guide">
+                                <Link className="nav-link" to="/testing">
                                     Step-by-Step Guide
                                 </Link>
                             </li>
@@ -85,6 +101,11 @@ const LandingPage = () => {
                                     Home Inspector Search
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Index2">
+                                    New Home Page
+                                </Link>
+                            </li>
                             {/*<li className="nav-item">*/}
                             {/*    <Link className="nav-link" to="/sign-in">*/}
                             {/*        Sign In*/}
@@ -93,13 +114,36 @@ const LandingPage = () => {
                         </ul>
                     </div>
                     {!isAuthenticated && (
-                        <Button onClick={openModal} variant="outline-primary">
+                        <button className="btn-outline-primary" onClick={openModal} variant="outline-primary">
                             Sign In
-                        </Button>
+                        </button>
                     )}
                     <AuthModal show={showModal} closeModal={closeModal}/>
                 </div>
             </nav>
+            <section className="hero-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h1>Welcome to Our Real Estate Platform</h1>
+                            <p>
+                                Discover the best properties, get expert advice, and simplify your
+                                home buying process with our platform.
+                            </p>
+                            <Button variant="primary" size="lg">
+                                Get Started
+                            </Button>
+                        </div>
+                        <div className="col-md-6">
+                            {/* Add an image or additional content here */}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/testing" element={<StepByStepGuide/>}/>
+            </Routes>
         </div>
 
     );
